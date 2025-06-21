@@ -5,7 +5,7 @@ import { AnimatedBackground } from '@/components/ui/animated-background'
 import { ArrowRight } from 'lucide-react'
 export default function ProjectsPage() {
   return (
-    <main className="space-y-8 p-4">
+    <main className="space-y-10">
       <h1 className="text-2xl font-bold">All Projects</h1>
       <div className="flex flex-col space-y-2">
         {PROJECTS.map((project) => (
@@ -14,7 +14,7 @@ export default function ProjectsPage() {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block rounded-xl px-3 py-3 transition-all duration-300 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/40"
+            className="group block rounded-xl border px-3 py-3 transition-all duration-300 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/40"
           >
             <div className="relative overflow-hidden rounded-xl">
               <AnimatedBackground

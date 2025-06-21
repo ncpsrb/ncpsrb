@@ -42,15 +42,15 @@ function MagneticSocialLink({
 export function Header() {
   const pathname = usePathname()
   return (
-    <header className="mb-8 flex items-center justify-between">
+    <header className="mt-6 mb-8 flex items-center justify-between md:mt-6">
       {/* Left Side: Profile image and name */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2">
         {pathname === '/' ? (
           // ✅ Homepage: Show just the profile image
           <img
             src="/cover.jpg"
             alt="Profile"
-            className="h-14 w-14 rounded-full border border-zinc-300 object-cover dark:border-zinc-700"
+            className="h-10 w-10 rounded-full border border-zinc-300 object-cover dark:border-zinc-700"
           />
         ) : (
           // ✅ Other pages: Hover shows arrow over image
@@ -86,7 +86,7 @@ export function Header() {
       </div>
 
       {/* Right Side: Social links */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-1">
         <MagneticSocialLink link="https://github.com/yourusername">
           <div className="flex items-center gap-1">
             <Github className="h-4 w-4" />
