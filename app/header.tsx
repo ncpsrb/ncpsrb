@@ -56,7 +56,7 @@ export function Header() {
           // ✅ Other pages: Hover shows arrow over image
           <Link
             href="/"
-            className="group relative h-14 w-14 overflow-hidden rounded-full border border-zinc-300 dark:border-zinc-700"
+            className="group relative h-10 w-10 overflow-hidden rounded-full border border-zinc-300 dark:border-zinc-700"
           >
             <img
               src="/cover.jpg"
