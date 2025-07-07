@@ -12,7 +12,6 @@ export default function ProjectsPage() {
           <Link
             key={project.name}
             href={project.link}
-            target="_blank"
             rel="noopener noreferrer"
             className="group block rounded-xl px-4 py-4 transition-all duration-300 hover:bg-zinc-100/20 dark:hover:bg-zinc-800/40"
           >

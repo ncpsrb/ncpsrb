@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   title: {
-    default: 'Nim - Personal website template',
-    template: '%s | Nim',
+    default: 'Natanael Pasaribu – Software Engineer & RPA Developer',
+    template: '%s | Natanael Pasaribu',
   },
   description:
-    'Nim is a free and open-source personal website template built with Next.js 15, React 19 and Motion-Primitives.',
+    'Portfolio of Natanael Pasaribu – an RPA Developer, QA Automation Engineer, and Software Developer. Passionate about building efficient automation and scalable systems.',
 }
 
 const geist = Geist({

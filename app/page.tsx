@@ -2,7 +2,7 @@
 // import { motion } from 'motion/react'
 import { motion } from 'framer-motion'
 import { Mail, XIcon } from 'lucide-react'
-import { Spotlight } from '@/components/ui/spotlight'
+import ProjectCardMddal from '@/components/ui/projectcardModal'
 import { useState } from 'react'
 import {
   MorphingDialog,
@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/morphing-dialog'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
-import { PROJECTS, WORK_EXPERIENCE, BLOG_POSTS, ABOUT_ME } from './data'
+import { PROJECTS, WORK_EXPERIENCE, BLOG_POSTS, ABOUT_ME, EMAIL } from './data'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -23,6 +23,10 @@ const VARIANTS_CONTAINER = {
       staggerChildren: 0.15,
     },
   },
+}
+
+const handleEmailClick = () => {
+  window.location.href = `mailto:${EMAIL}?subject=From%20Portfolio%20Website&body=Hi,%20may%20we%20have%20quick%20discussion`
 }
 
 const VARIANTS_SECTION = {
@@ -115,7 +119,10 @@ export default function Personal() {
 
           {/* Contact Section */}
           <div className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-            <button className="inline-flex items-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-500">
+            <button
+              onClick={handleEmailClick}
+              className="inline-flex items-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-500"
+            >
               <Mail />
               Contact Me
             </button>
@@ -162,26 +169,7 @@ export default function Personal() {
               key={project.name}
               className="min-w-[300px] transform transition-transform duration-300 hover:scale-[0.98] sm:min-w-0"
             >
-              <div className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-100 to-zinc-200 ring-1 ring-zinc-200/50 transition-all duration-300 ring-inset hover:ring-2 hover:shadow-xl hover:ring-zinc-400/50 dark:from-zinc-900 dark:to-zinc-800 dark:ring-zinc-800/50 dark:hover:ring-zinc-300/30">
-                {/* Video */}
-                <div className="transition-transform duration-500 ease-in-out group-hover:scale-105">
-                  <ProjectVideo src={project.video} />
-                </div>
-
-                {/* Overlay Text */}
-                <div className="absolute inset-0 z-10 flex flex-col justify-end bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 transition-all duration-300">
-                  <a
-                    className="text-base font-semibold tracking-wide text-white group-hover:underline"
-                    href={project.link}
-                    target="_blank"
-                  >
-                    {project.name}
-                  </a>
-                  <p className="mt-1 text-sm text-zinc-200">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
+              <ProjectCardMddal project={project} />
             </div>
           ))}
         </div>

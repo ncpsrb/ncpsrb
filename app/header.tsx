@@ -5,7 +5,7 @@ import { ABOUT_ME } from './data'
 import { Magnetic } from '@/components/ui/magnetic'
 import { Github, Twitter, Linkedin, ArrowLeft } from 'lucide-react'
 
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 function MagneticSocialLink({
   children,
   link,
@@ -17,6 +17,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         href={link}
+        target="_blank"
         className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       >
         {children}
@@ -41,32 +42,45 @@ function MagneticSocialLink({
 }
 export function Header() {
   const pathname = usePathname()
+  const router = useRouter()
+
+  const isHome = pathname === '/'
+  const isMainPage = ['/projects', '/blog'].includes(pathname)
+  const showBack = !isHome && !isMainPage
   return (
     <header className="mt-6 mb-8 flex items-center justify-between md:mt-6">
-      {/* Left Side: Profile image and name */}
       <div className="flex items-center gap-2">
-        {pathname === '/' ? (
-          // ✅ Homepage: Show just the profile image
-          <img
-            src="/cover.jpg"
-            alt="Profile"
-            className="h-10 w-10 rounded-full border border-zinc-300 object-cover dark:border-zinc-700"
-          />
-        ) : (
-          // ✅ Other pages: Hover shows arrow over image
-          <Link
-            href="/"
-            className="group relative h-10 w-10 overflow-hidden rounded-full border border-zinc-300 dark:border-zinc-700"
+        {showBack ? (
+          // Back Button
+          <button
+            onClick={() => router.back()}
+            className="group relative h-15 w-15 overflow-hidden rounded-full border border-zinc-300 dark:border-zinc-700"
           >
             <img
-              src="/cover.jpg"
+              src={ABOUT_ME[0].image}
               alt="Profile"
-              className="h-14 w-14 object-cover"
+              className="h-15 w-15 object-cover"
             />
-            {/* Hover overlay */}
             <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <ArrowLeft className="h-5 w-5 text-white" />
             </div>
+          </button>
+        ) : (
+          // Normal Home/Profile
+          <Link
+            href="/"
+            className="group relative h-15 w-15 overflow-hidden rounded-full border border-zinc-300 dark:border-zinc-700"
+          >
+            <img
+              src={ABOUT_ME[0].image}
+              alt="Profile"
+              className="h-15 w-15 object-cover"
+            />
+            {!isHome && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <ArrowLeft className="h-5 w-5 text-white" />
+              </div>
+            )}
           </Link>
         )}
         <div>
@@ -85,24 +99,18 @@ export function Header() {
         </div>
       </div>
 
-      {/* Right Side: Social links */}
+      {/* Right Side: Social Links */}
       <div className="flex items-center gap-1">
-        <MagneticSocialLink link="https://github.com/yourusername">
-          <div className="flex items-center gap-1">
-            <Github className="h-4 w-4" />
-          </div>
+        <MagneticSocialLink link="https://github.com/ncpsrb">
+          <Github className="h-4 w-4" />
         </MagneticSocialLink>
 
-        <MagneticSocialLink link="https://twitter.com/yourusername">
-          <div className="flex items-center gap-1">
-            <Twitter className="h-4 w-4" />
-          </div>
+        <MagneticSocialLink link="https://x.com/ncpasaribu">
+          <Twitter className="h-4 w-4" />
         </MagneticSocialLink>
 
-        <MagneticSocialLink link="https://linkedin.com/in/yourusername">
-          <div className="flex items-center gap-1">
-            <Linkedin className="h-4 w-4" />
-          </div>
+        <MagneticSocialLink link="https://linkedin.com/in/natanaelps">
+          <Linkedin className="h-4 w-4" />
         </MagneticSocialLink>
       </div>
     </header>
