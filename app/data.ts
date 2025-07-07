@@ -121,15 +121,13 @@ export const BLOG_POSTS: BlogPost[] = [
     uid: 'blog-1',
   },
 ]
-
 export const ABOUT_ME: AboutMe[] = [
   {
     name: 'Natanael Pasaribu',
     title: 'About Me',
     profession: 'Fullstack Developer',
     image: '/personal.jpg',
-    description:
-      'Hey there! I`m Natan, a passionate fullstack developer hailing from Indonesia.',
+    description: `👋 Hey there! I’m Natan, a passionate Fullstack Developer from 🇮🇩 Indonesia.\n`,
   },
 ]
 

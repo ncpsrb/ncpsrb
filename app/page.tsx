@@ -14,6 +14,7 @@ import {
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import { PROJECTS, WORK_EXPERIENCE, BLOG_POSTS, ABOUT_ME, EMAIL } from './data'
+import { TechStackSection } from '@/components/ui/Techstack'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -99,6 +100,7 @@ export default function Personal() {
       initial="hidden"
       animate="visible"
     >
+      {/* Head */}
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
@@ -151,6 +153,7 @@ export default function Personal() {
         </div>
       </motion.section>
 
+      {/* Projects */}
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
@@ -174,7 +177,14 @@ export default function Personal() {
           ))}
         </div>
       </motion.section>
-
+      {/* TECH STACKS */}
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <TechStackSection />
+      </motion.section>
+      {/* BLOG */}
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
