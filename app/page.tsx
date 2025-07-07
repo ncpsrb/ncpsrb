@@ -156,10 +156,10 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="mb-5 flex items-center justify-between">
-          <h3 className="text-lg font-medium">Products</h3>
+          <h3 className="text-lg font-medium">My Projects</h3>
           {PROJECTS.length > 4 && (
             <Link href="/projects" className="text-sm font-medium">
-              Show All →
+              Show All Projects →
             </Link>
           )}
         </div>

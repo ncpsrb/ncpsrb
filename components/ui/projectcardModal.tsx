@@ -94,8 +94,6 @@ export default function ProjectCardModal({ project }: { project: Project }) {
           {project.link && (
             <a
               href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-white p-2 shadow-md transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700"
               title="See Details"
             >
