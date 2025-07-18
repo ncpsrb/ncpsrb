@@ -95,9 +95,8 @@ export default function ProjectCardModal({ project }: { project: Project }) {
             <a
               href={project.link}
               className="inline-flex items-center justify-center rounded-full bg-white p-2 shadow-md transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700"
-              title="See Details"
             >
-              <EyeIcon className="h-4 w-4 text-zinc-600 dark:text-zinc-200" />
+              <EyeIcon className="h-10 w-10 text-zinc-600 dark:text-zinc-200" />
             </a>
           )}
 
@@ -110,7 +109,7 @@ export default function ProjectCardModal({ project }: { project: Project }) {
             className="inline-flex items-center justify-center rounded-full bg-white p-2 shadow-md transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700"
             title="Close"
           >
-            <XIcon className="h-4 w-4 text-zinc-600 dark:text-zinc-200" />
+            <XIcon className="h-10 w-10 text-zinc-600 dark:text-zinc-200" />
           </button>
         </div>
       </MorphingDialogContainer>

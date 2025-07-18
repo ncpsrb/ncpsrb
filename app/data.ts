@@ -46,6 +46,13 @@ export const PROJECTS: Project[] = [
     id: 'project7',
   },
   {
+    name: 'Robot Launcher',
+    description: 'Automation that monitor & launch Robot',
+    link: '',
+    video: '/portofolio/robot-launcher/launcher.gif',
+    id: 'project7',
+  },
+  {
     name: 'PowerApps Dashboard',
     description:
       'Interactive dashboard built with PowerApps to automate workflows',
