@@ -15,6 +15,6 @@ I’m an **Automation Engineer** with a strong background in **Robotic Process A
 - Submitted pull requests to enhance Node.js and Python libraries used in automation projects.
 
 ## 📫 How to Reach Me
-- Email: [natan.dev1709@gmail.com](mailto:natan.dev1709@gmail.com)
-- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/natanaelps)
-- Website : [Portofolio] (https://natanael.xnstore.my.id)
+- Email: [Contact Me](mailto:natan.dev1709@gmail.com)
+- LinkedIn: [My LinkedIn](https://www.linkedin.com/in/natanaelps)
+- Website : [Portofolio](https://natanael.xnstore.my.id)
