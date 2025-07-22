@@ -10,10 +10,6 @@ I’m an **Automation Engineer** with a strong background in **Robotic Process A
 - **Cloud Platforms**: AWS, GCP, Azure
 - **CI/CD**: GitHub Actions, Jenkins, Docker
 
-## 🛠️ Open-Source Contributions
-- Contributed to several open-source RPA projects, improving automation processes and efficiency.
-- Submitted pull requests to enhance Node.js and Python libraries used in automation projects.
-
 ## 📫 How to Reach Me
 - Email: [Contact Me](mailto:natan.dev1709@gmail.com)
 - LinkedIn: [My LinkedIn](https://www.linkedin.com/in/natanaelps)
