@@ -7,6 +7,8 @@ import {
   FaDocker,
   FaPhp,
   FaFigma,
+  FaRegObjectGroup,
+  FaMicrosoft,
 } from 'react-icons/fa'
 import {
   SiTailwindcss,
@@ -41,6 +43,14 @@ export function TechStackSection() {
     {
       name: 'Kofax RPA',
       icon: <MdOutlineExtension className="text-orange-500" />,
+    },
+    {
+      name: 'Power Automate',
+      icon: <FaMicrosoft className="text-green-600" />,
+    },
+    {
+      name: 'Power Apps',
+      icon: <FaMicrosoft className="text-green-600" />,
     },
     { name: 'MongoDB', icon: <SiMongodb className="text-green-600" /> },
     { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-700" /> },

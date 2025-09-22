@@ -185,7 +185,7 @@ export default function Personal() {
         <TechStackSection />
       </motion.section>
       {/* BLOG */}
-      <motion.section
+      {/* <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -226,7 +226,7 @@ export default function Personal() {
             ))}
           </AnimatedBackground>
         </div>
-      </motion.section>
+      </motion.section> */}
     </motion.main>
   )
 }

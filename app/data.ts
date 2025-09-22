@@ -32,24 +32,10 @@ type AboutMe = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Image Generator',
-    description: ' Python tool that creates images with custom text',
-    link: '/projects/post/exploring-the-intersection-of-design-ai-and-design-engineering',
-    video: '/portofolio/automation-gif/imagegenerator.gif',
-    id: 'project6',
-  },
-  {
-    name: 'Trend Checker',
-    description: 'Automation that analyzes and visualizes keyword trends',
-    link: '',
-    video: '/portofolio/automation-gif/trendchecker.gif',
-    id: 'project7',
-  },
-  {
     name: 'Robot Launcher',
     description: 'Automation that monitor & launch Robot',
     link: '',
-    video: '/portofolio/robot-launcher/launcher.gif',
+    video: '/portofolio/robot-launcher/launcher.png',
     id: 'project8',
   },
   {
