@@ -85,6 +85,22 @@ export const PROJECTS: Project[] = [
     video: '/portofolio/web/hungryguys.png',
     id: 'project7',
   },
+  {
+    name: 'Power Automate Projects',
+    description:
+      'Develop Power Automate Flow to automate daily tasks',
+    link: '',
+    video: '/portofolio/power-automate/image.png',
+    id: 'project8',
+  },
+  {
+    name: 'Microsoft Dev Tenant API',
+    description:
+      'Develop API to get Microsoft Dev Tenant Information using Graph API',
+    link: '',
+    video: '/portofolio/m365tenant/image.png',
+    id: 'project9',
+  },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [

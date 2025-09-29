@@ -301,7 +301,7 @@ export default function Personal() {
           )}
         </div>
         <div className="no-scrollbar flex gap-4 overflow-x-auto sm:grid sm:grid-cols-3 sm:gap-6">
-        {(showAll ? [...PROJECTS] : [...PROJECTS].slice(0, 6))
+        {(showAll ? [...PROJECTS] : [...PROJECTS].slice(0, 9))
               .sort((a, b) => Number(b.id) - Number(a.id))
               .map((project) => {
                 return (
