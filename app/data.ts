@@ -126,7 +126,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Software Engineer',
     start: '2022',
     end: 'Present',
-    link: '/experience/post/nstore-tech',
+    link: '',
     status: 'Freelance',
     description:
       'Developing web application base on client requirement',
