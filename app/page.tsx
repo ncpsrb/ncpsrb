@@ -180,6 +180,7 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        className="max-w-4xl mx-auto"
       >
         <div className="mb-5 flex items-center justify-between">
           <h3 className="text-lg font-medium">Work Experience</h3>
@@ -212,7 +213,7 @@ export default function Personal() {
                     data-id={job.id}
                     className={[
                       // container + stacking context
-                      'group relative isolate block rounded-xl px-4 py-4 transition-all duration-200 ease-in-out',
+                      'group relative isolate block rounded-xl px-2 py-2 transition-all duration-200 ease-in-out overflow-hidden',
                       // Clean hover effects - solid colors to prevent flickering
                       'hover:bg-zinc-100 dark:hover:bg-zinc-800',
                       // Subtle border accent
@@ -222,20 +223,20 @@ export default function Personal() {
                       'focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-500',
                     ].join(' ')}
                   >
-                    <div className="relative z-10 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-                      {/* Left: title/company/status */}
+                    <div className="relative z-10 flex flex-col gap-1 w-full">
+                      {/* Title and company row */}
                       <div className="min-w-0">
                         <h4 className="font-normal text-zinc-900 dark:text-zinc-100">
-                          <span className="inline-flex items-center gap-2">
-                            <Briefcase className="h-4 w-4 text-zinc-500 dark:text-zinc-400" />
-                            <span className="truncate">{job.title}</span>
-                            <span className="text-zinc-400">·</span>
-                            <span className="truncate text-zinc-700 dark:text-zinc-300">
+                          <span className="inline-flex items-center gap-2 flex-wrap">
+                            <Briefcase className="h-4 w-4 text-zinc-500 dark:text-zinc-400 flex-shrink-0" />
+                            <span className="truncate min-w-0">{job.title}</span>
+                            <span className="text-zinc-400 flex-shrink-0">·</span>
+                            <span className="truncate min-w-0 text-zinc-700 dark:text-zinc-300">
                               {job.company}
                             </span>
                             {job.status && (
                               <>
-                                <span className="text-zinc-400">·</span>
+                                <span className="text-zinc-400 flex-shrink-0">·</span>
                                 <span className="truncate text-zinc-600 italic dark:text-zinc-400">
                                   {job.status}
                                 </span>
@@ -243,39 +244,30 @@ export default function Personal() {
                             )}
                           </span>
                         </h4>
-
-                        {/* Description (two-line clamp) */} 
-                        {job.description && (
-                          <p className="line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">
-                            {job.description}
-                          </p>
-                        )}
-
-                        {/* Current status badge - positioned here for better visibility */}
-                        {isCurrent && (
-                          <div className="mt-1">
-                            <span className="inline-flex items-center rounded-full bg-lime-500/15 px-2 py-0.5 text-[10px] font-medium text-lime-600 ring-1 ring-lime-500/30 ring-inset dark:text-lime-400">
-                              Currently Working Here
-                            </span>
-                          </div>
-                        )}
-
-                        {/* Dates (mobile) */}
-                        <div className="mt-1 flex items-center gap-1 text-sm text-zinc-500 sm:hidden dark:text-zinc-400">
-                          <span className="flex-1">
-                            {job.start} - {job.end}
-                          </span>
-                        </div>
                       </div>
 
-                      {/* Right: dates + hover arrow (desktop) */}
-                      <div className="hidden items-center gap-1 sm:flex">
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                      {/* Description with better truncation */}
+                      {job.description && (
+                        <div className="w-full">
+                          <p className="line-clamp-3 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed break-words">
+                            {job.description}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Current status badge */}
+                      {isCurrent && (
+                        <div className="w-fit">
+                          <span className="inline-flex items-center rounded-full bg-lime-500/15 px-2 py-0.5 text-[10px] font-medium text-lime-600 ring-1 ring-lime-500/30 ring-inset dark:text-lime-400">
+                            Currently Working Here
+                          </span>
+                        </div>
+                      )}
+
+                      {/* Dates and arrow row */}
+                      <div className="flex items-center justify-between w-full">
+                        <span className="text-sm text-zinc-500 dark:text-zinc-400">
                           {job.start} - {job.end}
-                        </p>
-                        {" "}
-                        <span className="inline-flex translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
-                          →
                         </span>
                       </div>
                     </div>
