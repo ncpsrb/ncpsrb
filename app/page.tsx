@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useReducedMotion } from 'framer-motion'
-import { Briefcase, Mail, XIcon } from 'lucide-react'
+import { Briefcase, Mail, XIcon, Download } from 'lucide-react'
 import ProjectCardModal from '@/components/ui/projectcardModal'
 import { useState } from 'react'
 import {
@@ -185,19 +185,20 @@ export default function Personal() {
                 }}
               >
                 <MorphingDialogTrigger>
-                  <button className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition-colors hover:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700">
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l4-4m-4 4l-4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Download CV
-                  </button>
+                <button
+                onClick={handleEmailClick}
+                className="inline-flex items-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-600"
+              >
+                <Download />
+                Download Resume
+              </button>
                 </MorphingDialogTrigger>
                 <MorphingDialogContainer>
                   <MorphingDialogContent className="relative w-[90vw] max-w-md rounded-2xl bg-zinc-50 p-6 ring-1 ring-zinc-200/50 dark:bg-zinc-950 dark:ring-zinc-800/50">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center justify-between">
                         <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-                          Download CV
+                          Download Resume
                         </h3>
                         <MorphingDialogClose className="rounded-full p-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">
                           <XIcon className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />

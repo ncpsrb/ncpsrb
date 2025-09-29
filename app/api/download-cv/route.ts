@@ -17,5 +17,5 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  return NextResponse.json({ success: false }, { status: 401 })
+  return NextResponse.json({ success: false, message: 'Plase contact me to get my resume' }, { status: 401 })
 }
