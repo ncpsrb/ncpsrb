@@ -13,7 +13,6 @@ export default function BlogPage() {
       <div className="flex flex-col space-y-0">
         {BLOG_POSTS.map((blog) => {
           const isAvailable = Boolean(blog.link)
-
           const content = (
             <div
               className={`relative overflow-hidden rounded-xl ${

@@ -1,0 +1,239 @@
+2025-09-29T03:01:34.108Z
+⚙️ Path to project: "d:/Personal/ncpsrb"
+⚙️ Loading configuration from: "d:/Personal/ncpsrb/tsconfig.json"
+📂 Using glob rule: "d:/Personal/ncpsrb/next-env.d.ts"
+📁 And glob ignore rules: [
+  "d:/Personal/ncpsrb/node_modules/**/*"
+]
+└ Found source file: "d:/Personal/ncpsrb/next-env.d.ts"
+📂 Using glob rule: "d:/Personal/ncpsrb/**/*.ts"
+📁 And glob ignore rules: [
+  "d:/Personal/ncpsrb/node_modules/**/*"
+]
+└ Found source file: "d:/Personal/ncpsrb/next-env.d.ts"
+└ Found source file: "d:/Personal/ncpsrb/lib/utils.ts"
+└ Found source file: "d:/Personal/ncpsrb/lib/constants.ts"
+└ Found source file: "d:/Personal/ncpsrb/app/robots.ts"
+└ Found source file: "d:/Personal/ncpsrb/app/data.ts"
+📂 Using glob rule: "d:/Personal/ncpsrb/**/*.tsx"
+📁 And glob ignore rules: [
+  "d:/Personal/ncpsrb/node_modules/**/*"
+]
+└ Found source file: "d:/Personal/ncpsrb/mdx-components.tsx"
+└ Found source file: "d:/Personal/ncpsrb/hooks/useClickOutside.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/text-morph.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/text-loop.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/text-effect.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/techstack.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/spotlight.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/scroll-progress.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/projectcardModal.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/morphing-dialog.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/magnetic.tsx"
+└ Found source file: "d:/Personal/ncpsrb/components/ui/animated-background.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/page.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/layout.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/header.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/footer.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/projects/page.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/projects/post/layout.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/experience/page.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/blog/page.tsx"
+└ Found source file: "d:/Personal/ncpsrb/app/blog/post/layout.tsx"
+📂 Using glob rule: "d:/Personal/ncpsrb/.next/types/**/*.ts"
+📁 And glob ignore rules: [
+  "d:/Personal/ncpsrb/node_modules/**/*"
+]
+└ Found source file: "d:/Personal/ncpsrb/.next/types/cache-life.d.ts"
+└ Found source file: "d:/Personal/ncpsrb/.next/types/app/page.ts"
+└ Found source file: "d:/Personal/ncpsrb/.next/types/app/layout.ts"
+📂 Using glob rule: "d:/Personal/ncpsrb/next.config.mjs"
+📁 And glob ignore rules: [
+  "d:/Personal/ncpsrb/node_modules/**/*"
+]
+└ Found source file: "d:/Personal/ncpsrb/next.config.mjs"
+🕒 Finding the sources took (2460ms)
+📑 Parse file: "d:/Personal/ncpsrb/next-env.d.ts"
+└ Normalizing the content took (1ms)
+└ Found imports: 0 (0ms)
+└ Found exports: 0 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/next-env.d.ts"
+└ Normalizing the content took (1ms)
+└ Found imports: 0 (1ms)
+└ Found exports: 0 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/lib/utils.ts"
+└ Normalizing the content took (1ms)
+└ Found imports: 2 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/lib/constants.ts"
+└ Normalizing the content took (1ms)
+└ Found imports: 0 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/robots.ts"
+└ Normalizing the content took (1ms)
+└ Found imports: 3 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/data.ts"
+└ Normalizing the content took (0ms)
+└ Found imports: 0 (1ms)
+└ Found exports: 5 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/mdx-components.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 4 (0ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/hooks/useClickOutside.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 1 (0ms)
+└ Found exports: 1 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/text-morph.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 3 (0ms)
+└ Found exports: 2 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/text-loop.tsx"
+└ Normalizing the content took (0ms)
+└ Found imports: 3 (1ms)
+└ Found exports: 2 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/text-effect.tsx"
+└ Normalizing the content took (0ms)
+└ Found imports: 3 (1ms)
+└ Found exports: 4 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/techstack.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 6 (0ms)
+└ Found exports: 1 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/spotlight.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 3 (1ms)
+└ Found exports: 2 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/scroll-progress.tsx"
+└ Normalizing the content took (0ms)
+└ Found imports: 3 (1ms)
+└ Found exports: 2 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/projectcardModal.tsx"
+└ Normalizing the content took (0ms)
+└ Found imports: 2 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/morphing-dialog.tsx"
+└ Normalizing the content took (0ms)
+└ Found imports: 6 (1ms)
+└ Found exports: 12 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/magnetic.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 2 (1ms)
+└ Found exports: 2 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/components/ui/animated-background.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 3 (0ms)
+└ Found exports: 2 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/page.tsx"
+└ Normalizing the content took (19ms)
+└ Found imports: 9 (1ms)
+└ Found exports: 1 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/layout.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 7 (0ms)
+└ Found exports: 3 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/header.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 6 (0ms)
+└ Found exports: 1 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/footer.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 4 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/projects/page.tsx"
+└ Normalizing the content took (0ms)
+└ Found imports: 4 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/projects/post/layout.tsx"
+└ Normalizing the content took (0ms)
+└ Found imports: 3 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/experience/page.tsx"
+└ Normalizing the content took (0ms)
+└ Found imports: 3 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/blog/page.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 4 (0ms)
+└ Found exports: 1 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/app/blog/post/layout.tsx"
+└ Normalizing the content took (1ms)
+└ Found imports: 3 (1ms)
+└ Found exports: 1 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/.next/types/cache-life.d.ts"
+└ Normalizing the content took (0ms)
+└ Found imports: 4 (1ms)
+└ Found exports: 12 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/.next/types/app/page.ts"
+└ Normalizing the content took (1ms)
+└ Found imports: 4 (0ms)
+└ Found exports: 2 (1ms)
+📑 Parse file: "d:/Personal/ncpsrb/.next/types/app/layout.ts"
+└ Normalizing the content took (0ms)
+└ Found imports: 4 (1ms)
+└ Found exports: 2 (0ms)
+📑 Parse file: "d:/Personal/ncpsrb/next.config.mjs"
+└ Normalizing the content took (0ms)
+└ Found imports: 1 (1ms)
+└ Found exports: 1 (0ms)
+🕒 Parsing the files took (89ms)
+🎯 Processed files: 31 (680ms)
+🎯 Files having imports|exports: 29 (1ms)
+🎯 Total imports: 43 (2ms)
+🎯 Total exports: 79 (2ms)
+🎯 Analysed files: 29 (15ms)
+🎯 Not used exports: 50 (3ms)
+🎯 Not used export: ".next/types/app/layout.ts: LayoutProps"
+🎯 Not used export: ".next/types/app/layout.ts: PageProps"
+🎯 Not used export: ".next/types/app/page.ts: LayoutProps"
+🎯 Not used export: ".next/types/app/page.ts: PageProps"
+🎯 Not used export: ".next/types/cache-life.d.ts: revalidatePath"
+🎯 Not used export: ".next/types/cache-life.d.ts: revalidateTag"
+🎯 Not used export: ".next/types/cache-life.d.ts: unstable_cache"
+🎯 Not used export: ".next/types/cache-life.d.ts: unstable_cacheLife"
+🎯 Not used export: ".next/types/cache-life.d.ts: unstable_cacheTag"
+🎯 Not used export: ".next/types/cache-life.d.ts: unstable_expirePath"
+🎯 Not used export: ".next/types/cache-life.d.ts: unstable_expireTag"
+🎯 Not used export: ".next/types/cache-life.d.ts: unstable_noStore"
+🎯 Not used export: "app/blog/page.tsx: default"
+🎯 Not used export: "app/blog/post/layout.tsx: default"
+🎯 Not used export: "app/experience/page.tsx: default"
+🎯 Not used export: "app/layout.tsx: default"
+🎯 Not used export: "app/layout.tsx: metadata"
+🎯 Not used export: "app/layout.tsx: viewport"
+🎯 Not used export: "app/page.tsx: default"
+🎯 Not used export: "app/projects/page.tsx: default"
+🎯 Not used export: "app/projects/post/layout.tsx: default"
+🎯 Not used export: "app/robots.ts: default"
+🎯 Not used export: "components/ui/animated-background.tsx: AnimatedBackgroundProps"
+🎯 Not used export: "components/ui/magnetic.tsx: MagneticProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogCloseProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogContainerProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogContentProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogContextType"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogDescription"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogDescriptionProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogImage"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogImageProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogProviderProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogSubtitle"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogSubtitleProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogTitle"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogTitleProps"
+🎯 Not used export: "components/ui/morphing-dialog.tsx: MorphingDialogTriggerProps"
+🎯 Not used export: "components/ui/scroll-progress.tsx: ScrollProgressProps"
+🎯 Not used export: "components/ui/spotlight.tsx: Spotlight"
+🎯 Not used export: "components/ui/spotlight.tsx: SpotlightProps"
+🎯 Not used export: "components/ui/text-effect.tsx: PerType"
+🎯 Not used export: "components/ui/text-effect.tsx: PresetType"
+🎯 Not used export: "components/ui/text-effect.tsx: TextEffectProps"
+🎯 Not used export: "components/ui/text-loop.tsx: TextLoop"
+🎯 Not used export: "components/ui/text-loop.tsx: TextLoopProps"
+🎯 Not used export: "components/ui/text-morph.tsx: TextMorphProps"
+🎯 Not used export: "mdx-components.tsx: useMDXComponents"
+🎯 Not used export: "next.config.mjs: default"
+🎯 Found circular imports: 0 (51ms)
+🕒 Total ellapsed time (ms): 3308
+------------------------------------------------------------------------
