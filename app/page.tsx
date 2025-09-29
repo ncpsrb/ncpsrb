@@ -1,5 +1,5 @@
 'use client'
-// import { motion } from 'motion/react'
+
 import { motion, useReducedMotion } from 'framer-motion'
 import { Briefcase, Mail, XIcon } from 'lucide-react'
 import ProjectCardModal from '@/components/ui/projectcardModal'
@@ -44,6 +44,31 @@ const VARIANTS_SECTION = {
 
 const TRANSITION_SECTION = { ease: EASE, duration: 0.5 }
 
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  const formData = new FormData(e.currentTarget as HTMLFormElement)
+  const password = formData.get('password') as string
+
+  try {
+    const response = await fetch('/api/download-cv', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password }),
+    })
+
+    const data = await response.json()
+    
+    if (data.success) {
+      window.open(data.url, '_blank')
+      // Close modal
+      document.activeElement?.dispatchEvent(new Event('click', { bubbles: true }))
+    } else {
+      alert('Incorrect password!')
+    }
+  } catch (error) {
+    alert('Error occurred. Please try again.')
+  }
+}
 const handleEmailClick = () => {
   window.location.href = `mailto:${EMAIL}?subject=From%20Portfolio%20Website&body=Hi,%20may%20we%20have%20quick%20discussion`
 }
@@ -144,13 +169,102 @@ export default function Personal() {
 
           {/* Contact Section */}
           <div className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-            <button
-              onClick={handleEmailClick}
-              className="inline-flex items-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-600"
-            >
-              <Mail />
-              Contact Me
-            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={handleEmailClick}
+                className="inline-flex items-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-600"
+              >
+                <Mail />
+                Contact Me
+              </button>
+              <MorphingDialog
+                transition={{
+                  type: 'spring',
+                  bounce: 0,
+                  duration: 0.3,
+                }}
+              >
+                <MorphingDialogTrigger>
+                  <button className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition-colors hover:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700">
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l4-4m-4 4l-4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Download CV
+                  </button>
+                </MorphingDialogTrigger>
+                <MorphingDialogContainer>
+                  <MorphingDialogContent className="relative w-[90vw] max-w-md rounded-2xl bg-zinc-50 p-6 ring-1 ring-zinc-200/50 dark:bg-zinc-950 dark:ring-zinc-800/50">
+                    <div className="flex flex-col gap-4">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                          Download CV
+                        </h3>
+                        <MorphingDialogClose className="rounded-full p-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                          <XIcon className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />
+                          </MorphingDialogClose>
+                      </div>
+
+                      <div className="space-y-4">
+                        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                          Enter the password to download my CV.
+                        </p>
+
+                        <form
+                          onSubmit={async (e) => {
+                            e.preventDefault()
+                            const formData = new FormData(e.currentTarget as HTMLFormElement)
+                            const password = formData.get('password') as string
+
+                            try {
+                              const response = await fetch('/api/download-cv', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ password }),
+                              })
+
+                              const data = await response.json()
+
+                              if (data.success && data.redirect) {
+                                // Open the Drive URL directly
+                                window.open(data.url, '_blank')
+                                // Close modal after successful download using proper method
+                                const closeButton = document.querySelector('[aria-label="Close dialog"]') as HTMLButtonElement
+                                closeButton?.click()
+                              } else if (data.success) {
+                                window.open(data.url, '_blank')
+                                // Close modal after successful download using proper method
+                                const closeButton = document.querySelector('[aria-label="Close dialog"]') as HTMLButtonElement
+                                closeButton?.click()
+                              } else {
+                                alert(data.error || 'Incorrect password!')
+                              }
+                            } catch (error) {
+                              alert('Error occurred. Please try again.')
+                            }
+                          }}
+                          className="space-y-3"
+                        >
+                          <input
+                            type="password"
+                            name="password"
+                            placeholder="Enter password"
+                            required
+                            className="w-full rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 text-sm placeholder:text-zinc-500 focus:border-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-500/20 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-400 dark:focus:border-zinc-400 dark:focus:ring-zinc-400/20"
+                          />
+
+                          <button
+                            type="submit"
+                            className="w-full rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-600 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+                          >
+                            Download CV
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </MorphingDialogContent>
+                </MorphingDialogContainer>
+              </MorphingDialog>
+            </div>
 
             <p>
               Or reach out to me via{' '}
