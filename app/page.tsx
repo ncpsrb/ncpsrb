@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useReducedMotion } from 'framer-motion'
-import { Briefcase, Mail, XIcon, Download } from 'lucide-react'
+import { Briefcase, Download, Mail, XIcon } from 'lucide-react'
 import ProjectCardModal from '@/components/ui/projectcardModal'
 import { useState } from 'react'
 import {
@@ -15,6 +15,7 @@ import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import { PROJECTS, WORK_EXPERIENCE, BLOG_POSTS, ABOUT_ME, EMAIL } from './data'
 import { TechStackSection } from '@/components/ui/techstack'
+import { FaFileDownload } from 'react-icons/fa'
 
 // ------- Smooth motion presets -------
 const EASE = [0.22, 1, 0.36, 1] as const // soft “expo out” feel
@@ -185,13 +186,10 @@ export default function Personal() {
                 }}
               >
                 <MorphingDialogTrigger>
-                <button
-                onClick={handleEmailClick}
-                className="inline-flex items-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-600"
-              >
-                <Download />
-                Download Resume
-              </button>
+                  <button className="inline-flex items-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-zinc-600">
+                    <Download />
+                    Download Resume
+                  </button>
                 </MorphingDialogTrigger>
                 <MorphingDialogContainer>
                   <MorphingDialogContent className="relative w-[90vw] max-w-md rounded-2xl bg-zinc-50 p-6 ring-1 ring-zinc-200/50 dark:bg-zinc-950 dark:ring-zinc-800/50">
