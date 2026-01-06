@@ -5,16 +5,7 @@ export const metadata = {
 
 export default function DeleteDataPage() {
   return (
-    <main
-      style={{
-        maxWidth: 900,
-        margin: '40px auto',
-        padding: '0 16px',
-        fontFamily:
-          'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif',
-        lineHeight: 1.6,
-      }}
-    >
+    <div>
       <h1>User Data Deletion Instructions for Robot</h1>
       <p>Users may request deletion of their personal data at any time.</p>
 
@@ -23,7 +14,9 @@ export default function DeleteDataPage() {
       <ul>
         <li>
           <strong>Email:</strong>{' '}
-          <a href="mailto:your-email@example.com">your-email@example.com</a>
+          <a href="mailto:administrator@xnstore.my.id">
+            administrator@xnstore.my.id
+          </a>
         </li>
         <li>
           <strong>Subject:</strong> Data Deletion Request
@@ -44,6 +37,6 @@ export default function DeleteDataPage() {
         to retain certain information for legal, security, or compliance
         reasons.
       </p>
-    </main>
+    </div>
   )
 }

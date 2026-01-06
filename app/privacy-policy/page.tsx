@@ -5,16 +5,7 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main
-      style={{
-        maxWidth: 900,
-        margin: '40px auto',
-        padding: '0 16px',
-        fontFamily:
-          'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif',
-        lineHeight: 1.6,
-      }}
-    >
+    <div>
       <h1>Privacy Policy for Robot</h1>
       <p>
         <strong>Last updated:</strong> January 2026
@@ -85,9 +76,11 @@ export default function PrivacyPolicyPage() {
         </li>
         <li>
           <strong>Email:</strong>{' '}
-          <a href="mailto:your-email@example.com">your-email@example.com</a>
+          <a href="mailto:administrator@xnstore.my.id">
+            administrator@xnstore.my.id
+          </a>
         </li>
       </ul>
-    </main>
+    </div>
   )
 }
