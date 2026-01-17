@@ -69,31 +69,7 @@ export default function BannerPage() {
   return (
     <div className="page-wrap">
       <div className="page-inner">
-        <h1>NSTORE Banner Generator</h1>
-
         <div className="layout">
-          <div className="controls">
-            <label>Game Name</label>
-            <input
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder="Enter game name"
-            />
-
-            <label>Hero Image URL</label>
-            <input
-              value={imgUrl}
-              onChange={(e) => setImgUrl(e.target.value)}
-              placeholder="Enter image URL"
-            />
-
-            <button onClick={downloadPng} disabled={busy || !heroSrc}>
-              {busy ? 'Generating...' : 'Download PNG'}
-            </button>
-
-            {error && <div className="error">{error}</div>}
-          </div>
-
           <div ref={cardRef} className="card" id="card">
             <div className="bg-lines" />
             <div className="logo">
@@ -126,6 +102,27 @@ export default function BannerPage() {
               <img src="/Drive.png" className="drive-icon" alt="Drive" />
               LINK DIKIRIM VIA EMAIL
             </div>
+          </div>
+          <div className="controls">
+            <label>Game Name</label>
+            <input
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Enter game name"
+            />
+
+            <label>Hero Image URL</label>
+            <input
+              value={imgUrl}
+              onChange={(e) => setImgUrl(e.target.value)}
+              placeholder="Enter image URL"
+            />
+
+            <button onClick={downloadPng} disabled={busy || !heroSrc}>
+              {busy ? 'Generating...' : 'Download PNG'}
+            </button>
+
+            {error && <div className="error">{error}</div>}
           </div>
         </div>
       </div>

@@ -30,11 +30,10 @@ body {
 }
 
 .layout {
-  display: grid;
+  display: block;
   grid-template-columns: 420px 1fr;
-  gap: 24px;
   align-items: start;
-  margin-top: 18px;
+  margin-top: 10px;
 }
 
 /* ====== CONTROLS ====== */
@@ -43,7 +42,8 @@ body {
   background: #1b1b1b;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
+  margin: 20px 0;
 }
 
 .controls label {
@@ -100,6 +100,7 @@ body {
 .card {
   width: 728px;
   height: 728px;
+  margin: 0 auto;
   position: relative;
   background: #ffffff;
   overflow: hidden;
