@@ -151,11 +151,11 @@ body {
 
 .hero-container {
   position: absolute;
-  top: 105px;
+  top: 95px;
   left: 50%;
   transform: translateX(-50%);
   width: 95%;
-  height: 255px;
+  height: 265px;
   background: #ddd;
   border: 1px solid #ccc;
   z-index: 5;
