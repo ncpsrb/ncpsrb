@@ -98,8 +98,8 @@ body {
 /* ====== CARD ====== */
 
 .card {
-  width: 728px;
-  height: 728px;
+  width: 502px;
+  height: 503px;
   margin: 0 auto;
   position: relative;
   background: #ffffff;
@@ -112,8 +112,8 @@ body {
 .bg-lines {
   position: absolute;
   inset: 0;
-  background: url('/background.png') center/cover no-repeat;
-  opacity: 0.5;
+  background: url('/background.png') right/cover no-repeat;
+  opacity: 1;
   pointer-events: none;
 }
 
@@ -121,13 +121,13 @@ body {
 
 .logo {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 10px;
   z-index: 10;
 }
 
 .logo img {
-  width: 150px;
+  width: 100px;
   height: auto;
 }
 
@@ -138,12 +138,12 @@ body {
   top: 20px;
   left: 10px;
   z-index: 50;
-  width: 500px;
+  width: 179px;
   filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.1));
 }
 
 .promo-badge img {
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 
@@ -151,11 +151,11 @@ body {
 
 .hero-container {
   position: absolute;
-  top: 130px;
+  top: 105px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  height: 380px;
+  width: 95%;
+  height: 255px;
   background: #ddd;
   border: 1px solid #ccc;
   z-index: 5;
@@ -166,6 +166,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 40%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
@@ -174,55 +175,60 @@ body {
 
 .features {
   position: absolute;
-  bottom: 160px;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 85%;
   background: var(--grayBar);
   color: white;
   display: flex;
   justify-content: center;
-  gap: 50px;
-  padding: 10px 0;
-  border-radius: 5px;
+  gap: 30px;
+  border-radius: 0px;
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: normal;
   z-index: 10;
+  padding: 3px;
+  letter-spacing: normal;
 }
 
 /* ====== TITLE ====== */
 
 .title-bar {
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   width: 100%;
+  height: 40px;
   background: var(--red);
-  color: white;
-  text-align: center;
-  padding: 18px 0;
-  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 25px;
   font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  z-index: 5;
+  z-index: 10;
+  letter-spacing: normal;
+  margin-top: auto;
 }
-
 /* ====== FOOTER ====== */
 
 .footer-bar {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 40px;
   background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  color: #ffcc00;
+  gap: 8px;
+  color: #fff000;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Poppins', sans-serif;
+  padding: 5px;
 }
 
 .drive-icon {
